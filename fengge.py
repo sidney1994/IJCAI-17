@@ -10,8 +10,8 @@ import pickle
 start = datetime.datetime.now()
 print "start--%s"  % (start)
 
-fileHandle = open ( 'F:\userpay.txt','r')#'''
-file2 = open('F:\data8000000.txt','w')
+fileHandle = open ( "F:\\userpay.txt",'r')#'''
+file2 = open("F:\\data8000000.txt",'w')
 
 i = 0
 while ( i < 80000000):

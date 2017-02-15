@@ -1,4 +1,4 @@
-ï»¿data<-read.csv("feature1.csv",header=T)
+data<-read.csv("feature1.csv",header=T)
 data2<-read.csv("feature2.csv",header=T)
 summary(data)
 summary(data2)
@@ -44,14 +44,14 @@ summary(lm.sol7)
 lm.pred7<-predict(lm.sol7,data)
 data.frame(lm.pred7)
 #########################
-#å¹¿ä¹‰çº¿æ€§æ¨¡åž‹
+#¹ãÒåÏßÐÔÄ£ÐÍ
 library(randomForest)
 ?randomForest
 glm.sol<-randomForest(Mon~avermon+avertus+averwed+averthu+averfri+aversat+aversun+per_pay+shop_level+cate1,data=data,importance=TRUE ,proximity=TRUE)
 summary(glm.sol)
 pre<-predict(glm.sol, data=data)
 data.frame(pre)
-###################################################éšæœºæ£®æž—
+###################################################Ëæ»úÉ­ÁÖ
 library(randomForest)
 rf1<-randomForest(Tus~avermon+avertue+averwed+averthu+averfri+aversat+aversun+per_pay+shop_level+cate1++lastmon+lastue+lastwed+lasthu+lastfri+lastsat+lastsun,na.action=na.omit,data=data)
 data.frame(predict(rf1,data2))
